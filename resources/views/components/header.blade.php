@@ -2,7 +2,7 @@
     <div class="container mx-auto px-5 lg:max-w-screen-md">
         <div class="flex items-center flex-col lg:flex-row">
             <div>
-                <a href="/" class="no-underline hover:underline  text-lg">&#60;minhkhoa.tech /&#62;</a>
+                <a href="/" class="no-underline hover:underline  text-lg">&#60; {{config('app.name')}} /&#62;</a>
             </div>
             <div class="lg:ml-auto mt-10 lg:mt-0 flex items-center">
                 <a href="/" class="no-underline hover:underline uppercase text-lg">Trang chủ</a>
