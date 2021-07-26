@@ -43,6 +43,14 @@ class Settings extends Page
                             Components\TextInput::make('title')->autofocus()->required(),
                             Components\TextInput::make('description')->autofocus()->required(),
                             Components\TextInput::make('keyword')->autofocus()->required(),
+                            Components\TextInput::make('footer')->autofocus()->required(),
+                        ],
+                    ),
+                    Components\Tab::make(
+                        'Seo',
+                        [
+                            Components\Textarea::make('google_analytics')->autofocus(),
+
                         ],
                     ),
                 ]),

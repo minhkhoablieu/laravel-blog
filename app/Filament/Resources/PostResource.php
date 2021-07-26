@@ -24,7 +24,10 @@ class PostResource extends Resource
                 Components\TextInput::make('name')->autofocus()->required(),
                 Components\Textarea::make('description')->autofocus()->required(),
                 Components\BelongsToSelect::make('category_id')->relationship('category', 'name')->preload(),
-                Components\FileUpload::make('image')->image()->visibility('public'),
+                Components\FileUpload::make('image')
+                                        ->image()
+                                        ->directory('post')
+                                        ->visibility('public'),
                 Components\RichEditor::make('content')->required(),
             ]);
     }
