@@ -2,7 +2,7 @@
 
 <div>
     <a href="{{route('posts.show', $post->id)}}" class="rounded block no-underline border shadow p-5 mb-10 border-white-100">
-        <img class="h-48 w-full mb-5 object-cover object-center" src="{{asset("/storage/{$post->image}")}}" alt="{{$post->name}}">
+        <img class="w-full mb-5 object-cover object-center" src="{{asset("/storage/{$post->image}")}}" alt="{{$post->name}}">
         <div class="flex flex-col justify-between flex-1">
             <div>
                 <h2 class="leading-normal block mb-6 font-bold text-2xl">{{$post->name}}</h2>
