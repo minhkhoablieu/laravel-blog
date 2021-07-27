@@ -2,7 +2,9 @@
 
 @section('content')
     <h1 class="mb-5 font-bold text-3xl">{{$post->name}}</h1>
-    <div class="mt-5 leading-loose flex flex-col justify-center items-center">
+    <div class="mt-5 leading-loose flex flex-col ">
+        <p class="mb-5"> {{$post->description}}</p>
+
         {!! $post->content !!}
     </div>
     <div class="mt-10 flex flex-col md:flex-row items-center p-5 border border-lighter rounded">
