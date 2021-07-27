@@ -40,19 +40,42 @@ class Settings extends Page
                     Components\Tab::make(
                         'General',
                         [
-                            Components\TextInput::make('title')->autofocus()->required(),
-                            Components\TextInput::make('description')->autofocus()->required(),
-                            Components\TextInput::make('keyword')->autofocus()->required(),
-                            Components\TextInput::make('footer')->autofocus()->required(),
+                            Components\TextInput::make('app_name'),
+                            Components\TextInput::make('footer_text'),
                         ],
                     ),
                     Components\Tab::make(
-                        'Seo',
+                        'Email',
                         [
-                            Components\Textarea::make('google_analytics')->autofocus(),
+                            Components\TextInput::make('email'),
+                        ],
+                    ),
+                    Components\Tab::make(
+                        'Social Profiles',
+                        [
+                            Components\TextInput::make('facebook_url'),
+                            Components\TextInput::make('twitter_url'),
+                            Components\TextInput::make('instagram_url'),
+                            Components\TextInput::make('linkedin_url'),
+                            Components\TextInput::make('youtube_url'),
+                        ],
+                    ),
+                    Components\Tab::make(
+                        'Meta',
+                        [
+                            Components\TextInput::make('meta_site_name'),
+                            Components\TextInput::make('meta_description'),
+                            Components\TextInput::make('meta_keyword'),
+                        ],
+                    ),
+                    Components\Tab::make(
+                        'Analytics',
+                        [
+                            Components\TextInput::make('google_analytics'),
 
                         ],
                     ),
+
                 ]),
         ]);
 

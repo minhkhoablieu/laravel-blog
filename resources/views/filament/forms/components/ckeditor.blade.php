@@ -20,7 +20,7 @@
 </x-forms::field-group>
 
 
-<script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
+<script src="https://cdn.ckeditor.com/4.16.1/full/ckeditor.js"></script>
 <script>
     const editor = CKEDITOR.replace('{!! $formComponent->getId() !!}', {
         allowedContent:true,
@@ -29,5 +29,4 @@
         console.log(event.editor.getData())
         @this.set('{!! $formComponent->getName() !!}', event.editor.getData());
     })
-
 </script>

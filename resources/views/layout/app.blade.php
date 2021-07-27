@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>@yield('title') | {{ \App\Models\Setting::get('title') }}</title>
+    <title>@yield('title') | {{ \App\Models\Setting::get('meta_site_name') }}</title>
 
     <meta content='index, follow' name='robots'/>
 
-    <meta name="description" content="{{ \App\Models\Setting::get('description') }}">
-    <meta name="keyword" content="{{ \App\Models\Setting::get('keyword') }}">
+    <meta name="description" content="{{ \App\Models\Setting::get('meta_description') }}">
+    <meta name="keyword" content="{{ \App\Models\Setting::get('meta_keyword') }}">
 
-    <x-meta></x-meta>
+    @yield('meta')
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">

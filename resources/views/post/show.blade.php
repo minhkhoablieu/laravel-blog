@@ -1,5 +1,17 @@
 @extends('layout.app')
 
+@section('title') {{$post->name}} @endsection
+
+@section('meta')
+@php  $metaImage = asset("/storage/{$post->image}"); @endphp
+    <x-meta
+        :metaDescription="$post->description"
+        metaPageType="article"
+        :metaImage="$metaImage"
+    />
+@endsection
+
+
 @section('content')
     <h1 class="mb-5 font-bold text-3xl">{{$post->name}}</h1>
     <div class="mt-5 leading-loose flex flex-col ">

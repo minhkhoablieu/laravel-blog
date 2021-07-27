@@ -6,14 +6,22 @@ use Illuminate\View\Component;
 
 class Meta extends Component
 {
+
+    public $metaDescription;
+    public $metaPageType;
+    public $metaImage;
+
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($metaDescription, $metaPageType, $metaImage)
     {
         //
+        $this->metaDescription = $metaDescription;
+        $this->metaPageType = $metaPageType;
+        $this->metaImage = $metaImage;
     }
 
     /**
