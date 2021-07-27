@@ -19,6 +19,7 @@
 
 </head>
 <body>
+    <x-google-analytics />
     <x-header></x-header>
     <div class="container mx-auto px-5 lg:max-w-screen-md">
         @yield('content')
