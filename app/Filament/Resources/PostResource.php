@@ -6,6 +6,7 @@ use App\Filament\Resources\PostResource\Pages;
 use App\Filament\Resources\PostResource\RelationManagers;
 use App\Filament\Roles;
 use Filament\Resources\Forms\Components;
+use App\Filament\Resources\Forms\Components as CustomComponent;
 use Filament\Resources\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Tables\Columns;
@@ -28,7 +29,7 @@ class PostResource extends Resource
                                         ->image()
                                         ->directory('post')
                                         ->visibility('public'),
-                Components\RichEditor::make('content')->required(),
+                CustomComponent\Ckeditor::make('content')->required(),
             ]);
     }
 
