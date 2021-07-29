@@ -31,7 +31,8 @@ class CategoryResource extends Resource
         return $table
             ->columns([
                 //
-                Columns\Text::make('name')->searchable()->primary(),
+                Columns\Text::make('id')->sortable()->primary(),
+                Columns\Text::make('name')->searchable(),
             ])
             ->filters([
                 //
@@ -51,6 +52,13 @@ class CategoryResource extends Resource
             Pages\ListCategories::routeTo('/', 'index'),
             Pages\CreateCategory::routeTo('/create', 'create'),
             Pages\EditCategory::routeTo('/{record}/edit', 'edit'),
+        ];
+    }
+
+    public static function authorization()
+    {
+        return [
+            Roles\Editor::allow(),
         ];
     }
 }

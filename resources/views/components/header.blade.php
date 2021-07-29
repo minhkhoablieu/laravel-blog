@@ -5,7 +5,7 @@
                 <a href="/" class="no-underline hover:underline  text-lg">&#60; {{ \App\Models\Setting::get('app_name') }} /&#62;</a>
             </div>
             <div class="lg:ml-auto mt-10 lg:mt-0 flex items-center">
-                <a href="/" class="no-underline hover:underline uppercase text-lg">Trang chủ</a>
+                <a href="/" class="no-underline hover:underline text-lg">Trang chủ</a>
             </div>
         </div>
 

@@ -12,9 +12,11 @@ class Settings extends Page
 {
     use HasForm;
 
-    public static $icon = 'heroicon-o-document-text';
+    public static $icon = 'heroicon-o-cog';
 
     public static $view = 'filament.pages.settings';
+
+    public static $navigationSort = 2;
 
     public static $saveButtonLabel = 'Update';
 

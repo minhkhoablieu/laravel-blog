@@ -20,10 +20,11 @@
 </x-forms::field-group>
 
 
-<script src="https://cdn.ckeditor.com/4.16.1/full/ckeditor.js"></script>
+<script src="{{asset('vendor/ckeditor/ckeditor.js')}}"></script>
 <script>
     const editor = CKEDITOR.replace('{!! $formComponent->getId() !!}', {
         allowedContent:true,
+        extraPlugins: 'base64image',
     });
     editor.on('change', function(event){
         console.log(event.editor.getData())
