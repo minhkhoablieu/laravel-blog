@@ -9,7 +9,7 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ["Quicksand", "sans-serif"],
+                sans: ["Roboto", "sans-serif"],
             },
         },
     },
