@@ -5,7 +5,7 @@
 @section('meta')
 
     @php
-        $metaDescription = \App\Models\Setting::get('meta_description')
+        $metaDescription = Setting::get('meta_description')
 
     @endphp
     <x-meta

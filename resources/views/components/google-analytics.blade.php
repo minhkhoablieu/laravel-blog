@@ -1,8 +1,8 @@
 
-@if( !empty(\App\Models\Setting::get('google_analytics')) )
+@if( !empty(Setting::get('google_analytics')) )
 <!-- Global site tag (gtag.js) - Google Analytics -->
     @php
-        $code = \App\Models\Setting::get('google_analytics');
+        $code = Setting::get('google_analytics');
     @endphp
 <script async src="https://www.googletagmanager.com/gtag/js?id={{$code}}"></script>
 <script>

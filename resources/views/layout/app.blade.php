@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>@yield('title') | {{ \App\Models\Setting::get('meta_site_name') }}</title>
+    <title>@yield('title') | {{ Setting::get('meta_site_name') }}</title>
 
     <meta content='index, follow' name='robots'/>
 
-    <meta name="description" content="{{ \App\Models\Setting::get('meta_description') }}">
-    <meta name="keyword" content="{{ \App\Models\Setting::get('meta_keyword') }}">
+    <meta name="description" content="{{ Setting::get('meta_description') }}">
+    <meta name="keyword" content="{{ Setting::get('meta_keyword') }}">
 
     @yield('meta')
 
@@ -21,6 +21,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@tabler/icons@latest/iconfont/tabler-icons.min.css">
 
 </head>
 <body>
@@ -31,6 +32,9 @@
     </div>
 
     <x-footer></x-footer>
-    <script src="{{mix('js/app.js')}}"></script>
+    <script src="https://unpkg.com/@tabler/icons@1.36.0/icons-react/dist/index.umd.js"></script>
+
+    <script src="{{mix('js/app.js')}}"></script>i
+
 </body>
 </html>

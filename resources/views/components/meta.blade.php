@@ -19,7 +19,7 @@ if(!isset($metaPageType)){
 @endswitch
 
 <!-- Facebook Meta -->
-<meta property="og:site_name" content="{{ \App\Models\Setting::get('meta_site_name') }}" />
+<meta property="og:site_name" content="{{ Setting::get('meta_site_name') }}" />
 
 <meta property="og:url" content="{{url()->full()}}" />
 <meta property="og:title" content="@yield('title') | {{ config('app.name') }}" />
