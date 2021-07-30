@@ -20,14 +20,15 @@
 </x-forms::field-group>
 
 
+@push('filament-scripts')
 <script src="{{asset('vendor/ckeditor/ckeditor.js')}}"></script>
 <script>
     const editor = CKEDITOR.replace('{!! $formComponent->getId() !!}', {
         allowedContent:true,
-        extraPlugins: 'base64image',
     });
     editor.on('change', function(event){
         console.log(event.editor.getData())
-        @this.set('{!! $formComponent->getName() !!}', event.editor.getData());
+        @this.set('{!! $formComponent->getName() !!}', event.editor.getData())
     })
 </script>
+@endpush
