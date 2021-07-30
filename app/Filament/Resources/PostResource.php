@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\PostResource\Pages;
@@ -17,7 +16,7 @@ class PostResource extends Resource
 {
     public static $icon = 'heroicon-o-document-text';
 
-    public static function form(Form $form)
+    public static function form(Form $form): Form
     {
         return $form
             ->schema([
@@ -54,7 +53,7 @@ class PostResource extends Resource
             ]);
     }
 
-    public static function table(Table $table)
+    public static function table(Table $table): Table
     {
         return $table
             ->columns([
@@ -71,14 +70,14 @@ class PostResource extends Resource
             ]);
     }
 
-    public static function relations()
+    public static function relations(): array
     {
         return [
             //
         ];
     }
 
-    public static function routes()
+    public static function routes(): array
     {
         return [
             Pages\ListPosts::routeTo('/', 'index'),
@@ -88,7 +87,7 @@ class PostResource extends Resource
     }
 
 
-    public static function authorization()
+    public static function authorization(): array
     {
         return [
             Roles\Editor::allow(),

@@ -1,7 +1,7 @@
 @props(['post'])
 
 <div>
-    <a href="{{route('posts.show', $post->id)}}" class="rounded block no-underline border shadow p-5 mb-10 border-white-100">
+    <a href="{{route('getBySlug', $post->slug->key)}}" class="rounded block no-underline border shadow p-5 mb-10 border-white-100">
         <img class="w-full mb-5 object-cover object-center" src="{{asset("/storage/{$post->image}")}}" alt="{{$post->name}}">
         <div class="flex flex-col justify-between flex-1">
             <div>

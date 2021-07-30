@@ -17,7 +17,7 @@ class PageResource extends Resource
 {
     public static $icon = 'heroicon-o-collection';
     public static $navigationSort = 1;
-    public static function form(Form $form)
+    public static function form(Form $form): Form
     {
         return $form
             ->schema([
@@ -25,7 +25,6 @@ class PageResource extends Resource
                     Components\TextInput::make('name')
                                             ->autofocus()
                                             ->required(),
-
 
                     Components\Select::make('status')
                                         ->required()
@@ -53,7 +52,6 @@ class PageResource extends Resource
     {
         return $table
             ->columns([
-                //
                 Columns\Text::make('id')->sortable()->primary(),
                 Columns\Text::make('name')->searchable(),
                 Columns\Text::make('user.name'),
@@ -61,7 +59,6 @@ class PageResource extends Resource
                 Columns\Text::make('published_at')->dateTime('D-m H:i'),
             ])
             ->filters([
-                //
             ]);
     }
 

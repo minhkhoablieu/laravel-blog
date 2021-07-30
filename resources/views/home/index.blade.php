@@ -5,19 +5,19 @@
 @section('meta')
 
     @php
-    $metaDescription = \App\Models\Setting::get('meta_description')
+        $metaDescription = \App\Models\Setting::get('meta_description')
 
     @endphp
     <x-meta
         :metaDescription="$metaDescription"
         metaPageType="website"
-        metaImage="/public/images/meta_image.jpg"
-    />
+        metaImage="/public/images/meta_image.jpg"></x-meta>
 @endsection
 
 @section('content')
+
     @foreach($posts as $post)
-        <x-post.card :post="$post" />
+        <x-post.card :post="$post"></x-post.card>
     @endforeach
     {{$posts->links()}}
 @endsection

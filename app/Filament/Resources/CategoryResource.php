@@ -16,7 +16,7 @@ class CategoryResource extends Resource
 {
     public static $icon = 'heroicon-o-collection';
 
-    public static function form(Form $form)
+    public static function form(Form $form): Form
     {
         return $form
             ->schema([
@@ -26,7 +26,7 @@ class CategoryResource extends Resource
             ->columns(2);
     }
 
-    public static function table(Table $table)
+    public static function table(Table $table): Table
     {
         return $table
             ->columns([
@@ -39,14 +39,14 @@ class CategoryResource extends Resource
             ]);
     }
 
-    public static function relations()
+    public static function relations(): array
     {
         return [
             //
         ];
     }
 
-    public static function routes()
+    public static function routes(): array
     {
         return [
             Pages\ListCategories::routeTo('/', 'index'),
@@ -55,7 +55,7 @@ class CategoryResource extends Resource
         ];
     }
 
-    public static function authorization()
+    public static function authorization(): array
     {
         return [
             Roles\Editor::allow(),

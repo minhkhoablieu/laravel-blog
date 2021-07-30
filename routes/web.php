@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',[PostController::class, 'index'])->name('index');
-Route::get('/posts/{post}',[PostController::class, 'show'])->name('posts.show');
+Route::get('/',[HomeController::class, 'index'])->name('index');
+Route::get('/{slug}', [HomeController::class, 'show'])->name('getBySlug');

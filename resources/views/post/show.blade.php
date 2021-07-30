@@ -7,8 +7,7 @@
     <x-meta
         :metaDescription="$post->description"
         metaPageType="article"
-        :metaImage="$metaImage"
-    />
+        :metaImage="$metaImage"></x-meta>
 @endsection
 
 
