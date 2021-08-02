@@ -34,7 +34,7 @@
     <x-footer></x-footer>
     <script src="https://unpkg.com/@tabler/icons@1.36.0/icons-react/dist/index.umd.js"></script>
 
-    <script src="{{mix('js/app.js')}}"></script>i
+    <script src="{{mix('js/app.js')}}"></script>
 
 </body>
 </html>

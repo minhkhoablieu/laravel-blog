@@ -5,7 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\PageResource\Pages;
 use App\Filament\Resources\PageResource\RelationManagers;
 use App\Filament\Roles;
-use App\Filament\Resources\Forms\Components as CustomComponent;
+use App\Filament\Resources\Forms\Components\Ckeditor;
 use Filament\Resources\Forms\Components;
 use Filament\Resources\Forms\Form;
 use Filament\Resources\Resource;
@@ -44,7 +44,7 @@ class PageResource extends Resource
                                         ->directory('page')
                                         ->visibility('public'),
 
-                CustomComponent\Ckeditor::make('content')->required(),
+                Ckeditor::make('content')->required(),
             ]);
     }
 

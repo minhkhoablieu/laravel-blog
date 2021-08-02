@@ -4,7 +4,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\PostResource\Pages;
 use App\Filament\Roles;
 use Filament\Resources\Forms\Components;
-use App\Filament\Resources\Forms\Components as CustomComponent;
+use App\Filament\Resources\Forms\Components\Ckeditor;
 use Filament\Resources\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Tables\Columns;
@@ -49,7 +49,7 @@ class PostResource extends Resource
                                         ->directory('post')
                                         ->visibility('public'),
 
-                CustomComponent\Ckeditor::make('content')->required(),
+                Ckeditor::make('content')->required(),
             ]);
     }
 
