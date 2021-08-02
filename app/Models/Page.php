@@ -73,4 +73,9 @@ class Page extends Model
     {
         return $this->belongsTo(\Filament\Models\User::class, 'user_id');
     }
+
+    public function slug(): \Illuminate\Database\Eloquent\Relations\hasOne
+    {
+        return $this->hasOne(Slug::class, 'reference_id');
+    }
 }

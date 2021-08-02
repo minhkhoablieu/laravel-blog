@@ -53,7 +53,8 @@ class PageResource extends Resource
         return $table
             ->columns([
                 Columns\Text::make('id')->sortable()->primary(),
-                Columns\Text::make('name')->searchable(),
+                Columns\Text::make('name')->searchable()
+                                ->url(fn ($page) => route('getBySlug', $page->slug->key),true),
                 Columns\Text::make('user.name'),
                 Columns\Text::make('status')->sortable()->options(Page::listStatus()),
                 Columns\Text::make('published_at')->dateTime('D-m H:i'),

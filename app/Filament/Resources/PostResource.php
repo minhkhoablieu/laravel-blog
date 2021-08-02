@@ -59,7 +59,8 @@ class PostResource extends Resource
             ->columns([
                 //
                 Columns\Text::make('id')->sortable()->primary(),
-                Columns\Text::make('name')->searchable(),
+                Columns\Text::make('name')->searchable()
+                            ->url(fn ($post) => route('getBySlug', $post->slug->key), true),
                 Columns\Text::make('category.name'),
                 Columns\Text::make('user.name'),
                 Columns\Text::make('status')->sortable()->options(Post::listStatus()),
