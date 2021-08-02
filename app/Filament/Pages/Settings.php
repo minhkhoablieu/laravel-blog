@@ -2,6 +2,7 @@
 
 namespace App\Filament\Pages;
 
+use App\Filament\Roles\Editor;
 use App\Models\Setting;
 use Filament\Forms\HasForm;
 use Filament\Pages\Page;
@@ -18,7 +19,7 @@ class Settings extends Page
 
     public static $navigationSort = 2;
 
-    public static $saveButtonLabel = 'Update';
+    public static string $saveButtonLabel = 'Update';
 
     public $record;
 
@@ -98,5 +99,12 @@ class Settings extends Page
     protected function viewData(): array
     {
         return [];
+    }
+
+    public static function authorization(): array
+    {
+        return [
+            Editor::deny(),
+        ];
     }
 }
