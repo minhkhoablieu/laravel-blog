@@ -22,9 +22,7 @@
 @push('filament-scripts')
 <script src="{{asset('vendor/ckeditor/ckeditor.js')}}"></script>
 <script>
-    const editor = CKEDITOR.replace('{!! $formComponent->getId() !!}', {
-        allowedContent : "true"
-    });
+    const editor = CKEDITOR.replace('{!! $formComponent->getId() !!}');
 
     const button = document.querySelector('button[type="submit"]');
 
