@@ -21,11 +21,6 @@ mix.js("resources/js/app.js", "public/js").postCss(
 );
 mix.sass("node_modules/highlight.js/scss/github-dark-dimmed.scss","public/css/hljs.css");
 
-mix.styles([
-    'public/css/app.css',
-    'public/css/hljs.css'
-], 'public/css/app.css');
-
 if (mix.inProduction()) {
     mix.version();
 }

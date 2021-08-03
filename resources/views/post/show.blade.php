@@ -10,7 +10,9 @@
         :metaImage="$metaImage"></x-meta>
 @endsection
 
-
+@push('after-styles')
+    <link href="{{ mix('css/hljs.css') }}" rel="stylesheet">
+@endpush
 @section('content')
     <h1 class="mb-5 font-bold text-3xl">{{$post->name}}</h1>
     <div class="mt-5 leading-loose flex flex-col ">
