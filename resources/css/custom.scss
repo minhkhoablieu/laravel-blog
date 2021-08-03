@@ -2,4 +2,7 @@ pre {
     background: #22272e;
     padding: 10px;
     border-radius: 0.25rem;
+    overflow: auto;
+    word-wrap: normal;
+    white-space: pre;
 }
